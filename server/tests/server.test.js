@@ -117,7 +117,7 @@ describe('DELETE /todos/:id', () => {
         Todo.findById({
           _id: todos[0]._id
         }).then((todo) => {
-          expect(todo).toBe(null);
+          expect(todo).toNotExist();
           done();
         }).catch((e) => done(e));
       });
